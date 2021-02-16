@@ -1,5 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:real_estate_app/pages/home_page/home_page_components/home_page_components.dart';
-import 'package:real_estate_app/styles/styles.dart';
+
 
 class MyHomePage extends StatelessWidget {
   @override

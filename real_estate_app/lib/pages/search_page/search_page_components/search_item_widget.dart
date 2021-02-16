@@ -1,12 +1,11 @@
+import 'package:flutter/material.dart';
 import 'package:real_estate_app/pages/search_page/search_page_components/search_page_components.dart';
 class SearchItemWidget extends StatelessWidget {
   final String text;
   final String text1;
   final String text2;
-  const SearchItemWidget({
-    this.text,this.text1,this.text2
-  });
-
+  final String imageUrl;
+  const SearchItemWidget({this.text, this.text1, this.text2,this.imageUrl});
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -15,7 +14,11 @@ class SearchItemWidget extends StatelessWidget {
           margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
           height: 200,
           width: 380,
-          decoration: AppBorder.buttonDecoration,
+          decoration: BoxDecoration(borderRadius:AppBorder.secondaryContainer,image: DecorationImage(
+      image: NetworkImage(imageUrl
+      ),
+      fit: BoxFit.fill,
+    ),),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(340, 10, 0, 0),
@@ -30,7 +33,9 @@ class SearchItemWidget extends StatelessWidget {
           child: Container(
             height: 30,
             width: 100,
-            decoration: AppBorder.appDecoration,
+            decoration: BoxDecoration(
+                borderRadius: AppBorder.primaryContainer,
+                color: AppColor.primaryColor),
             child: Center(
               child: Text(
                 text,
@@ -40,26 +45,26 @@ class SearchItemWidget extends StatelessWidget {
           ),
         ),
         Container(
-      margin: EdgeInsets.fromLTRB(20, 200, 0, 0),
-      height: 50,
-      width: 280,
-      child: Text(
-        text1,
-        style: AppTextStyle.secondaryText,
-      ),
-    ),
-    Container(
-      margin: EdgeInsets.fromLTRB(15, 240, 0, 0),
-      child: Row(
-        children: [
-          Icon(Icons.place),
-          Text(
-            text2,
-            style: AppStyle.ternaryAppText,
-          )
-        ],
-      ),
-    )
+          margin: EdgeInsets.fromLTRB(20, 200, 0, 0),
+          height: 50,
+          width: 280,
+          child: Text(
+            text1,
+            style: AppTextStyle.secondaryText,
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.fromLTRB(15, 240, 0, 0),
+          child: Row(
+            children: [
+              Icon(Icons.place),
+              Text(
+                text2,
+                style: AppStyle.ternaryAppText,
+              )
+            ],
+          ),
+        )
       ],
     );
   }

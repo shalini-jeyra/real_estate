@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:real_estate_app/pages/home_page/home_page.dart';
 import 'package:real_estate_app/pages/liked_page.dart';
 import 'package:real_estate_app/pages/message_page.dart';
-import 'package:real_estate_app/pages/profile_page.dart';
+import 'package:real_estate_app/pages/filter_page/profile_page.dart';
 import 'package:real_estate_app/pages/search_page/search_page.dart';
 import 'package:real_estate_app/styles/styles.dart';
 
