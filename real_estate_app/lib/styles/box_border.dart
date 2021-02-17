@@ -5,6 +5,7 @@ class AppBorder {
   static final secondaryContainer =BorderRadius.only(
       topRight: Radius.circular(30),
       topLeft: Radius.circular(30),);
+      static final ternaryContainer=BorderRadius.circular(12);
 }
 
 class ButtonBorder {

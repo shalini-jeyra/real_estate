@@ -14,8 +14,8 @@ class SearchPage extends StatelessWidget {
               vertical: 20.0,
             ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Colors.white,
+             borderRadius: AppBorder.ternaryContainer,
+              color: AppColor.primaryColor,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
