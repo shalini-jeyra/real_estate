@@ -32,6 +32,6 @@ class HintTextStyle{
   static final TextStyle primaryText= TextStyle(fontSize: 15, color: TextColor.secondaryColor);
   static final TextStyle secondaryText=TextStyle(
             color: TextColor.primaryColor,
-            fontSize: 14,
+            fontSize: 13,
   );
 }

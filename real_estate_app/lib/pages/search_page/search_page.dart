@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate_app/pages/filter_page/filter_page.dart';
 import 'package:real_estate_app/pages/search_page/search_page_components/search_page_components.dart';
 
 class SearchPage extends StatelessWidget {
@@ -14,7 +15,7 @@ class SearchPage extends StatelessWidget {
               vertical: 20.0,
             ),
             decoration: BoxDecoration(
-             borderRadius: AppBorder.ternaryContainer,
+              borderRadius: AppBorder.ternaryContainer,
               color: AppColor.primaryColor,
             ),
             child: Row(
@@ -47,17 +48,26 @@ class SearchPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ListTile(
-              leading: Text(
-                'Popular in London',
-                style: AppTextStyle.primaryText,
-              ),
-              trailing: Wrap(
-                children: [
-                  Icon(Icons.menu),                  
-                 Text('Map')
-                ],
-              ),
+            Row(
+              children: [
+                Text(
+                  'Popular in London',
+                  style: AppTextStyle.primaryText,
+                ),
+                Spacer(),
+                IconButton(
+                  icon: Icon(Icons.menu),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (buildContext) => FilterPage(),
+                      ),
+                    );
+                  },
+                ),
+                // Text('Map')
+              ],
             ),
             SearchItemWidget(
               text: '\u{20AC}${2.445}pem',

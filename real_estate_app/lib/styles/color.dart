@@ -6,6 +6,7 @@ class AppColor{
 class TextColor{
   static final Color primaryColor=Colors.black;
   static final Color secondaryColor=Color.fromARGB(255,75,75,75);
+  static final Color ternaryColor=Colors.transparent;
 }
 
 class IconColor{
