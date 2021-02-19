@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate_app/pages/filter_page/filter_page.dart';
 import 'package:real_estate_app/pages/home_page/home_page.dart';
 import 'package:real_estate_app/pages/liked_page.dart';
 import 'package:real_estate_app/pages/message_page.dart';
-import 'package:real_estate_app/pages/profile_page.dart';
 import 'package:real_estate_app/pages/search_page/search_page.dart';
 import 'package:real_estate_app/styles/styles.dart';
 
@@ -19,7 +19,7 @@ class _BottomNavigationState extends State<BottomNavigation>
     LikedPage(),
     SearchPage(),
     MessagePage(),
-    ProfilePage(),
+    FilterPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -50,13 +50,8 @@ class _BottomNavigationState extends State<BottomNavigation>
                 ),
                 label: 'liked'),
             BottomNavigationBarItem(
-                icon: IconButton(
-                  icon:Icon(Icons.search,
+                icon:Icon(Icons.search,
                   size: 24.0),
-                  onPressed: (){
-                    
-                  },
-                ),
                 label: 'Search'),
             BottomNavigationBarItem(
                 icon: Icon(
